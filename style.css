@@ -1,35 +1,37 @@
-body {
-			margin: 0;
-			padding: 0;
-		}
+.sidebar {
+  height: 100%;
+  width: 160px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 16px;
+}
 
-		.container {
-			display: flex;
-		}
+/* Style sidebar links */
+.sidebar a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #818181;
+  display: block;
+}
 
-		.sidebar {
-			width: 200px;
-			background-color: #136a13;
-			color: #fff;
-			box-sizing: border-box;
-			position: fixed;
-		}
+/* Style links on mouse-over */
+.sidebar a:hover {
+  color: #f1f1f1;
+}
 
-		.content {
-			flex: 1;
-			padding: 20px;
-			box-sizing: border-box;
-			margin-left: 200px;
-			text-align: justify;
-		}
+/* Style the main content */
+.main {
+  margin-left: 160px; /* Same as the width of the sidenav */
+  padding: 0px 10px;
+}
 
-		.sidebar a {
-			display: block;
-			color: #fff;
-			text-decoration: none;
-			padding: 10px;
-		}
-
-		.sidebar a:hover {
-			background-color: #2980b9;
-		}
+/* Add media queries for small screens (when the height of the screen is less than 450px, add a smaller padding and font-size) */
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
