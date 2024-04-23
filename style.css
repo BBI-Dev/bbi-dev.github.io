@@ -7,6 +7,7 @@
   background-color: #111;
   overflow-x: hidden;
   padding-top: 16px;
+  display:static;
 }
 
 /* Style sidebar links */
