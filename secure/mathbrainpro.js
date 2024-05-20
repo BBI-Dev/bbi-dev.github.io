@@ -4,7 +4,7 @@ function check(){
   array=eval('user'+count);
   let username = array.at(count-1);
   if(value==username){
-    alert('success')
+    alert('success');
   }
   let count=count+1;
 }
@@ -12,3 +12,4 @@ function check(){
 const length = 1;
 const user1 = ["admin2", 2024, 6, 23];
 let count=1;
+alert('hi');
