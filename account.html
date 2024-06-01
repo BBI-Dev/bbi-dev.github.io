@@ -37,6 +37,7 @@
   </head>
 
   <body>
+    <iframe name="dummy" style="width:0px; height:0px; border:none;"></iframe>
     <script>
          function usercheck(){
            let userput = document.getElementById("userinput"); 
@@ -45,7 +46,7 @@
             let value = userput.value
             
             // Display the value in an alert 
-           if(value == "mrst" || value=="jess" || value=="mrb" || value=="butterfly"){
+           if(value == "mrst" || value=="jess" || value=="mrb" || value=="butterfly" || value=="connorh"){
             window.location = "https://bbi-dev.github.io/user/" + value + ".html";
            } else {
              document.getElementById("userwrong").style.display = "block";
@@ -93,11 +94,12 @@
               <div class="card wb-card" style="width: 18rem; margin: 5px">
                 <strong style="font-size:30px;">&nbsp;User</strong>
                 
-                
+                <form onsubmit="usercheck()" target="dummy">
                 <input type="text" id="userinput" name="Your username" style="width:10rem; display: block;
                     margin-left: auto;
                     margin-right: auto;
                     margin-top:10px;">
+                </form>
                 <div class="card-body">
                   <h5 class="card-title"></h5>
                   <p class="card-text">Use this box if you are a user of BBI Dev products</p>
@@ -117,11 +119,12 @@
               <div class="card wb-card" style="width: 18rem; margin: 5px">
                 <strong style="font-size:30px;">&nbsp;Insider</strong>
                 
-                
+                <form onsubmit="insidercheck()" target="dummy">
                 <input type="text" id="insiderinput" name="Your username" style="width:10rem; display: block;
                     margin-left: auto;
                     margin-right: auto;
                     margin-top:10px;">
+                </form>
                 <div class="card-body">
                   <h5 class="card-title"></h5>
                   <p class="card-text">Use this box if you contribute to making BBI Dev products</p>
